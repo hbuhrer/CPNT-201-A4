@@ -1,8 +1,12 @@
 {
-  "name": "cpnt-201-a4",
+  "name": "201-a4",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "description": "A Vanilla Vite project created for assignment 201-a4. It has been modified according to the requirements listed in the Marking Criteria.",
+  "main": "src/main.js",
+  "author": "Hendrich Buhrer",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
