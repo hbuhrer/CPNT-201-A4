@@ -3,6 +3,7 @@ import javascriptLogo from '../assets/images/javascript.svg';
 import viteLogo from '../assets/images/vite.svg';
 import { setupCounter } from './counter';
 import dayjs from 'dayjs';
+import { Moon } from "lunarphase-js";
 
 const app = document.querySelector('#app');
 
@@ -34,3 +35,9 @@ const startDate = dayjs('2023-09-05');
 const currentDate = dayjs();
 const daysSinceStart = currentDate.diff(startDate, 'day');
 document.querySelector('#daysSinceStart').textContent = `Number of days since Sept 5, 2023: ${daysSinceStart}`;
+
+const phaseEmoji = Moon.lunarPhaseEmoji();
+
+app.innerHTML += `
+  <p id="phaseEmoji">Lunar Phase: ${phaseEmoji}</p>
+`;
