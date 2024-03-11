@@ -12,5 +12,6 @@ https://www.npmjs.com/package/lunarphase-js
 
 ## Links
 
-- [Deployed GitHub Page](https://hbuhrer.github.io/CPNT-201-A4)
+- [Deployed GitHub Page]([https://hbuhrer.github.io/CPNT-201-A4](https://cpnt-201-a4-nu.vercel.app))
 - [GitHub Repository](https://github.com/hbuhrer/CPNT-201-A4/)
+- [VERCEL Deployment]((https://cpnt-201-a4-nu.vercel.app))
