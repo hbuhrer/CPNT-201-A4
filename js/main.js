@@ -1,7 +1,7 @@
 import '../css/style.css';
 import javascriptLogo from '../assets/images/javascript.svg';
 import viteLogo from '../assets/images/vite.svg';
-import { setupCounter } from './counter';
+import { setupCounter } from './counter.js';
 import dayjs from 'dayjs';
 import { Moon } from "lunarphase-js";
 
@@ -24,6 +24,7 @@ app.innerHTML = `
     </p>
     <p id="currentDate"></p>
     <p id="daysSinceStart"></p>
+    <p id="phaseEmoji"></p>
   </div>
 `;
 
@@ -37,7 +38,4 @@ const daysSinceStart = currentDate.diff(startDate, 'day');
 document.querySelector('#daysSinceStart').textContent = `Number of days since Sept 5, 2023: ${daysSinceStart}`;
 
 const phaseEmoji = Moon.lunarPhaseEmoji();
-
-app.innerHTML += `
-  <p id="phaseEmoji">Lunar Phase: ${phaseEmoji}</p>
-`;
+document.querySelector('#phaseEmoji').textContent = `Lunar Phase: ${phaseEmoji}`;
