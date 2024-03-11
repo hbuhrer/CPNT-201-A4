@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "description": "A Vanilla Vite project created for assignment 201-a4. It has been modified according to the requirements listed in the Marking Criteria.",
-  "main": "src/main.js",
+  "main": "/js/main.js",
   "author": "Hendrich Buhrer",
   "license": "MIT",
   "scripts": {
@@ -14,5 +14,8 @@
   },
   "devDependencies": {
     "vite": "^5.1.6"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.10"
   }
 }

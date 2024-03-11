@@ -1,9 +1,12 @@
-import '../css/style.css'
-import javascriptLogo from '../assets/images/javascript.svg'
-import viteLogo from '../assets/images/vite.svg'
-import { setupCounter } from './counter'
+import '../css/style.css';
+import javascriptLogo from '../assets/images/javascript.svg';
+import viteLogo from '../assets/images/vite.svg';
+import { setupCounter } from './counter';
+import dayjs from 'dayjs';
 
-document.querySelector('#app').innerHTML = `
+const app = document.querySelector('#app');
+
+app.innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="${viteLogo}" class="logo" alt="Vite logo" />
@@ -18,7 +21,16 @@ document.querySelector('#app').innerHTML = `
     <p class="read-the-docs">
       Click on the Vite logo to learn more
     </p>
+    <p id="currentDate"></p>
+    <p id="daysSinceStart"></p>
   </div>
-`
+`;
 
-setupCounter(document.querySelector('#counter'))
+setupCounter(document.querySelector('#counter'));
+
+document.querySelector('#currentDate').textContent = `Today's date: ${dayjs().format('MMM DD, YYYY')}`;
+
+const startDate = dayjs('2023-09-05');
+const currentDate = dayjs();
+const daysSinceStart = currentDate.diff(startDate, 'day');
+document.querySelector('#daysSinceStart').textContent = `Number of days since Sept 5, 2023: ${daysSinceStart}`;
